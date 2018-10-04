@@ -38,11 +38,12 @@ describe('Comprobamos funciones al reservar un horario', function() {
 describe('Comprobamos funciones de puntuar un restaurante', function () {
     it('Debería retornar el promedio correcto considerando el nuevo puntaje', function () {
         var sumatoria = 0;
-        for (var i = 0; i < this.calificaciones.length; i++) {
-            sumatoria += this.calificaciones[i]
+        for (var i = 0; i < listadoDeRestaurantes[i].calificaciones.length + 1; i++) {
+            sumatoria += listadoDeRestaurantes[i].calificaciones[i]
         }
-        var promedio = sumatoria / this.calificaciones.length;
+        var promedio = sumatoria / listadoDeRestaurantes[i].calificaciones.length;
         let promedioFinal = Math.round(promedio * 10) / 10;
+        return promedioFinal;
     })
 
     it('Deberia retonar un 0 cuando un restaurant no tiene ninguna puntuación', function () {

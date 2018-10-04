@@ -33,6 +33,7 @@ Aplicacion.prototype.dibujarListado = function(restaurantes) {
     } else {
         //Por cada erestaurante, se ejecuta la función crearTarjetaDeRestaurante()
         restaurantes.forEach(function(restaurant) {
+
             elementos.push(self.crearTarjetaDeRestaurante(restaurant));
         });
     }

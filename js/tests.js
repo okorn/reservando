@@ -71,3 +71,15 @@ describe('Comprobamos funciones de buscar un restaurante', function () {
 
     })
 })
+
+// Se prueba la funcion de obtenerRestaurantes con diferentes filtros
+
+describe('Probamos la funcion de obtenerRestaurantes', function () {
+    it('Debe retornar un restaurante segun los filtros seleccionados', function () {
+        expect(listado.obtenerRestaurantes(null,null,null).length).to.equal(24);
+        expect(listado.obtenerRestaurantes(null,'Londres',null).length).to.equal(4);
+        expect(listado.obtenerRestaurantes('Desayuno',null,null).length).to.equal(4);
+        expect(listado.obtenerRestaurantes(null,null,'05:00').length).to.equal(0);
+        expect(listado.obtenerRestaurantes('Desayuno','París','17:00').length).to.equal(1);
+    })
+})

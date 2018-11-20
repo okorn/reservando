@@ -72,5 +72,4 @@ Restaurant.prototype.sumatoria = function(SumarAArray) {
 
 Restaurant.prototype.promedio = function (PromediarArray) {
     return Math.round((this.sumatoria(PromediarArray) / PromediarArray.length) * 10) / 10;
-
 }

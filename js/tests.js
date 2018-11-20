@@ -83,3 +83,21 @@ describe('Probamos la funcion de obtenerRestaurantes', function () {
         expect(listado.obtenerRestaurantes('Desayuno','París','17:00').length).to.equal(1);
     })
 })
+
+// Se prueba la funcion del precio base
+
+describe('Probamos la funcion de precioBase del objeto reserva', function() {
+    it('Debe calcular correctamente el precio base', function() {
+      expect(listadoDeReservas[0].precioBase()).to.equal(2800);
+      expect(listadoDeReservas[1].precioBase()).to.equal(300);
+    });
+  });
+
+  // Se prueba la funcion del precio final
+
+  describe('Probamos la funcion de final del objeto reserva', function() {
+    it('Debe calcular correctamente el precio final', function() {
+      expect(listadoDeReservas[0].precioFinal()).to.equal(2310);
+      expect(listadoDeReservas[1].precioFinal()).to.equal(100);
+    });
+  });
